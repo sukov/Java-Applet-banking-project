@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Бендиго Е-банкинг</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+function otvori()
+{
+	window.open ('pocetna.html','_self',false);
+}
+
+function proveri()
+{	/*var c_name=document.getElementById("user").value;
+	var i,x,y,ARRcookies=document.cookie.split(";");
+	for (i=0;i<ARRcookies.length;i++)
+  {
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+    {
+		
+    otvori();
+	return x;
+    }
+  }
+	alert("Корисничкото име не постои!");
+	*/
+	
+	//Kodot za Kolacinja ne raboti na lokalen host
+	otvori();
+}
+</script>
+</head>
+
+<body>
+
+<div id="logo"></div>
+<div id="glavno">
+<div id="levo">
+<div id="logo2"></div>
+<div id="levo1">
+<br />
+<a href="nov.html" >Нов корисник</a> <br /><br />
+<a href="zabloz.html">Заборавена лозинка</a> <br />
+</div>
+</div>
+
+<div id="sredina">
+<p id="naslov">Најава</p>
+<div id="sredina1">
+Корисничко име: <br /><input type="text" id="user"/> <br />
+Лозинка: <br /><input type="text" /> <br />
+
+<input type="button" value="Најави се" onclick="proveri()" style="font-size:15px;margin-left:75px;margin-top:15px"/>
+</div>
+<div id="sredina2"></div>
+</div>
+<div id="desno">
+<p id="naslov">Мобилна Верзија</p>
+<div id="desno1"></div>
+<img src="img/play-button.png" usemap="#mapa"/>
+<map name="mapa">
+<area shape="rect" coords="0,0,113,30" href="https://play.google.com/store" target="_blank">
+<area shape="rect" coords="124,0,242,30" href="http://www.apple.com/iphone/from-the-app-store/" target="_blank">
+
+</map>
+
+
+</div>
+</div>
+</body>
+</html>

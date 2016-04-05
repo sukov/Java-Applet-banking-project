@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Бендиго Е-банкинг</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+var m=0,p=0,m1=0,p1=0;
+function password()
+{	
+	var a=document.getElementById("pass").value.length;
+	
+	if(a<5)
+	{	document.getElementById("promena2").innerHTML=" ";
+		document.getElementById("promena1").innerHTML="Лозинката е кратка!";
+		document.getElementById("promena4").innerHTML=" ";
+		document.getElementById("promena3").innerHTML=" ";
+		p=0;
+		
+	}
+	
+	else
+	{
+		document.getElementById("promena1").innerHTML=" ";
+		document.getElementById("promena2").innerHTML="Лозинката е во ред.";
+		p=1;
+	}
+}
+
+function passwordConf()
+{
+	var a=document.getElementById("passconf").value;
+	var b=document.getElementById("pass").value;
+	if(a!="" && p==1){
+	if(a==b)
+	{	document.getElementById("promena4").innerHTML=" ";
+		document.getElementById("promena3").innerHTML="Лозинките се софпаѓаат.";
+		p1=1;
+		
+	}
+	
+	else
+	{	document.getElementById("promena3").innerHTML=" ";
+		document.getElementById("promena4").innerHTML="Лозинките не се софпаѓаат!";
+		p1=0;
+	}
+	}
+}
+
+function mail()
+{
+	var a=document.getElementById("mail").value;
+	for(var i=0;i<a.length;i++)
+	{
+		if(a.charAt(i)=="@")
+		{	for(var j=i;j<a.length;j++)
+				{
+					if(a.charAt(j)==".")
+					{	document.getElementById("promena6").innerHTML=" ";
+						document.getElementById("promena5").innerHTML="Мејлот е валиден.";
+						m=1;
+						break;
+					}
+				}
+				break;
+		}
+		
+		if(i+1==a.length)
+		{	document.getElementById("promena5").innerHTML=" ";
+			document.getElementById("promena6").innerHTML="Мејлот не е валиден.";
+			document.getElementById("promena8").innerHTML=" ";
+			document.getElementById("promena7").innerHTML=" ";
+			m=0;
+		}
+			
+	}
+	
+	
+}
+
+function mailConf()
+{
+	var a=document.getElementById("mailconf").value;
+	var b=document.getElementById("mail").value;
+	
+	if(a!="" && m==1){
+	if(a==b)
+	{	document.getElementById("promena7").innerHTML=" ";
+		document.getElementById("promena8").innerHTML="Мејловите се софпаѓаат.";
+		m1=1;
+	}
+	
+	else
+	{	document.getElementById("promena8").innerHTML=" ";
+		document.getElementById("promena7").innerHTML="Мејловите не се софпаѓаат!";
+		m1=0;
+	}}
+}
+
+function voRed()
+{
+	if(p==1 && p1==1 && m==1 && m1==1)
+	{
+		window.open ('registriran.html','_self',false);
+	}
+	else
+	{
+		document.getElementById("promena9").innerHTML="Неуспешна регистрација, не се сите услови задоволени";
+	}
+}
+
+</script>
+
+<script language="javascript">
+
+
+function setCookie()
+{
+	var c_name="username";
+	var value=document.getElementById("user").value;
+	expiredays=365;
+var exdate=new Date();
+exdate.setDate(exdate.getDate()+expiredays);
+document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+
+
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+<div id="logo"></div>
+<div id="glavno">
+<div id="levo">
+<div id="logo2"></div>
+</div>
+<div id="sredinaNov">
+<p id="naslov">Регистрација на нов корисник</p>
+<div id="nov1">
+
+<p>Корисничко име:</p>
+<p>Лозинка: </p>
+<p>Потврдете лозинка:</p>
+<p>Е-маил адреса:</p>
+<p>Потврдете Е-маил:</p>
+
+</div>
+<div id="nov2">
+<input type="text" id="user" /><br />
+<input type="password" id="pass" onkeypress="password()" onchange="password()" onclick="password()" /><br />
+<input type="password" id="passconf" onchange="passwordConf()" /><br />
+<input type="text" id="mail" onchange="mail()" onclick="mail()" /><br />
+<input type="text" id="mailconf" onchange="mailConf()"/>
+</div>
+<div id="clear"></div>
+<input type="button" value="Регистрирај се" style="margin-left:190px" onclick="setCookie();voRed()" />
+</div>
+
+</div>
+<div id="promena1"></div>
+<div id="promena2"></div>
+<div id="promena3"></div>
+<div id="promena4"></div>
+<div id="promena5"></div>
+<div id="promena6"></div>
+<div id="promena7"></div>
+<div id="promena8"></div>
+<div id="promena9"></div>
+</body>
+</html>

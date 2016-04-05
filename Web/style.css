@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+body 
+{
+	min-width:1045px;	
+}
+#logo
+{	margin:0 auto;
+	background-image:url(img/Banka.jpg);
+	width:510px;
+	height:150px;
+	
+	
+	
+	background-repeat:no-repeat;
+}
+
+#glavno
+{	min-width:500px;
+	min-height:450px;
+	width:1045px;
+	margin:0 auto;
+	
+}
+
+#logo2
+{
+	background-image:url(img/logo_Ebanking.gif);
+	background-repeat:no-repeat;
+	width:289px;
+	height:56px;
+
+}
+
+#levo
+{
+	width:235px;
+	height:170px;
+	float:left;
+	
+}
+#levo1
+{
+	background-color:#CCCCCC;
+	border:1px solid rgba(0,0,0,.1);
+	height:100px;
+}
+
+#levoPocetna
+{
+	background-color:#CCCCCC;
+	border:1px solid rgba(0,0,0,.1);
+	height:100px;
+	width:190px;
+	margin-left:-10px;
+}
+#levoPocetna a
+{	
+	margin-left:7px;
+	font-size:17px;
+	
+}
+#levo a:visited,a
+{	margin:29px;
+	color:#990033;
+	text-decoration:none;
+	font-size:18px;
+	
+	
+}
+#levo a:hover
+{
+	color:#CC0066;
+}
+
+#sredina
+{
+	float:left;
+	margin-left:30px;
+	margin-top:76px;
+	width:500px;
+	height:250px;
+	background-color:#FDEEF4;
+	border:1px solid rgba(0,0,0,.1);
+}
+
+#sredina1
+{
+	float:left;
+	margin-left:60px;
+	margin-top:30px;
+	font-size:18px;
+}
+#sredinaNov
+{
+	float:left;
+	width:550px;
+	margin-left:30px;
+	margin-top:76px;
+	border:1px solid rgba(0,0,0,.1);
+}
+
+#sredinaPocetna
+{
+	float:left;
+	margin-left:-50px;
+	margin-top:75px;
+	width:700px;
+	height:400px;
+	background-color:#FDEEF4;
+	border:1px solid rgba(0,0,0,.1);
+}
+#sredinaPocetna a
+{
+	color:blue !important;
+}
+#nov1
+{
+	font-size:18px;
+	float:left;
+	margin-top:-20px;
+	margin-left:5px;
+	
+}
+#nov1 p
+{
+	margin:20px;
+	
+}
+
+#nov2
+{
+	float:left;
+	margin-left:10px;
+	margin-top:-11px;
+}
+
+#nov2 input
+{
+	margin:10px;
+}
+
+#sredina2
+{	background-image:url(img/lock.jpg);
+	width:146px;
+	height:185px;
+	float:right;
+	margin-right:40px;
+	
+}
+
+#naslov
+{	margin-top:-20px;
+	font-size:24px;
+	text-align:center;
+	background-color:#CCC;
+	color:#903;
+	
+	
+}
+
+#clear
+{
+	clear:both;
+}
+#desno
+{
+	margin-top:76px;
+	float:right;
+	width:243px;
+	border:1px solid rgba(0,0,0,.1);
+}
+#desno1
+{
+	background-image:url(img/mobilen.jpg);
+	width:133px;
+	height:168px;
+	margin:0 auto;
+	
+	
+}
+
+#promena1
+{
+	position:absolute;
+	left:805px;
+	bottom:337px;
+	color:red;
+	
+}
+#promena2
+{
+	position:absolute;
+	left:805px;
+	bottom:337px;
+	color:green;
+}
+#promena3
+{
+	position:absolute;
+	left:805px;
+	bottom:295px;
+	color:green;
+}
+#promena4
+{
+	position:absolute;
+	left:805px;
+	bottom:295px;
+	color:red;
+}
+#promena5
+{
+	position:absolute;
+	left:805px;
+	bottom:255px;
+	color:green;
+}
+#promena6
+{
+	position:absolute;
+	left:805px;
+	bottom:255px;
+	color:red;
+}
+#promena7
+{
+	position:absolute;
+	left:805px;
+	bottom:212px;
+	color:red;
+}
+#promena8
+{
+	position:absolute;
+	left:805px;
+	bottom:212px;
+	color:green;
+}
+
+#promena9
+{
+	position:absolute;
+	left:520px;
+	bottom:130px;
+	color:red;
+}
+#reg
+{	position:absolute;
+	margin:0 auto;
+	bottom:360px;
+	left:460px;
+	
+}
+
+#podNaslov span
+{
+	
+	
+	word-spacing:55px;
+}
+#podNaslov
+{
+	color:#903;
+	font-size:18px;
+	margin-left:30px;
+
+}
+
+#raspoloziva1,#raspoloziva2
+{
+	word-spacing:140px;
+	margin-left:40px;
+}

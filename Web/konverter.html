@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+
+function konvertiraj()
+{
+	var sel1 = document.getElementById("od").options[document.getElementById("od").selectedIndex].value;
+	var sel2 = document.getElementById("vo").options[document.getElementById("vo").selectedIndex].value;
+	var vkupno=0;
+	var suma=document.getElementById("kursna1").value;
+	var cur;
+	if(sel1==1)
+	{
+		if(sel2==1)
+		{
+			vkupno=suma*1;
+			cur="MKD";
+		}
+		if(sel2==45)
+		{
+			vkupno=suma/45;
+			cur="US";
+		}
+		if(sel2==61)
+		{
+			vkupno=suma/61;
+			cur="Euro";
+		}
+	
+	}
+	
+	
+else if(sel1==45)
+	{
+		if(sel2==1)
+		{
+			vkupno=suma*45;
+			cur="MKD";
+		}
+		if(sel2==45)
+		{
+			vkupno=suma*1;
+			cur="US";
+		}
+		if(sel2==61)
+		{
+			vkupno=(suma*45)/61;
+			cur="Euro";
+		}
+	}
+	
+	
+else if(sel1==61)
+	{
+		if(sel2==1)
+		{
+			vkupno=suma*61;
+			cur="MKD";
+		}
+		if(sel2==45)
+		{
+			vkupno=(suma*61)/45;
+			cur="US";
+		}
+		if(sel2==61)
+		{
+			vkupno=suma*1;
+			cur="Euro";
+		}
+	}
+	
+	vkupno=vkupno.toFixed(3);
+	
+	document.getElementById("konv").innerHTML=vkupno+cur;
+	
+}
+
+</script>
+</head>
+
+<body>
+<div id="logo"></div>
+<div id="glavno">
+<div id="levo">
+<div id="logo2"></div>
+</div>
+<div id="sredinaNov">
+<p id="naslov">Конвертер на валути</p>
+
+Од <select id="od">
+  <option value="1">МКД</option>
+  <option value="45">US Долар</option>
+  <option value="61">Евро</option>
+</select>
+<input type="text" width="3px" id="kursna1"/>
+
+Во <select id="vo">
+  <option value="1">МКД</option>
+  <option value="45">US Долар</option>
+  <option value="61">Евро</option>
+</select>
+<input type="button" onclick="konvertiraj()" value="Претвори"/>
+<span id="konv"></span>
+</div>
+</div>
+</body>
+</html>

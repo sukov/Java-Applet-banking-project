@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Бендиго Е-банкинг</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+function slucaenBroj()
+{	var from=100000000000;
+	var to=999999999999;
+    var tran= Math.floor(Math.random()*(to-from+1)+from);
+	document.getElementById("dev").innerHTML= "210"+"-"+tran+"USD";
+	document.getElementById("den").innerHTML= "210"+"-"+tran+"MKD";
+	from=0;
+	to=99999999;
+	tran= Math.floor(Math.random()*(to-from+1)+from);
+	var a=tran;
+	from=0;
+	to=a-1;
+	tran= Math.floor(Math.random()*(to-from+1)+from);
+	
+	document.getElementById("raspoloziva1").innerHTML=a+"USD"+" "+"+"+tran+"USD";
+	
+	from=0;
+	to=99999999;
+	tran= Math.floor(Math.random()*(to-from+1)+from);
+	a=tran;
+	from=0;
+	to=a-1;
+	tran= Math.floor(Math.random()*(to-from+1)+from);
+	
+	document.getElementById("raspoloziva2").innerHTML=a+"MKD"+" "+"-"+tran+"MKD";
+}
+
+</script>
+</head>
+
+<body onload="slucaenBroj()">
+<div id="logo"></div>
+<div id="glavno">
+<div id="levo">
+<div id="logo2"></div>
+<div id="levoPocetna">
+<a href="kursna.html">Курсна листа</a><br /><br />
+<a href="konverter.html">Конвертер на валути</a>
+</div>
+</div>
+<div id="sredinaPocetna">
+<p id="naslov">Мои сметки</p>
+
+<p id="podNaslov">Трансакциски <span>сметки 	  	  </span>Расположива <span>состојба	   Последна</span> промена</p>
+<hr />
+
+<a href="devizna.html" id="dev">210-5016399275-42USD </a>
+<span id="raspoloziva1"></span>
+<br /><br />
+ 								  
+ 	   
+  
+
+<a href="denarska.html" id="den">210-5016399275-42MKD</a> 
+ <span id="raspoloziva2"></span>
+   	 							   
+    </div>  
+    
+    </div>
+</body>
+</html>
